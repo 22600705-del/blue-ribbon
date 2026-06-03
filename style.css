@@ -1,0 +1,282 @@
+header {
+    width: 100%;
+    height: 110px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+header h1 {color: rgb(0, 119, 255);}
+header img {
+    width: 40px; height: 30px;
+}
+nav {
+    display: flex;
+    align-items: center;
+}
+nav a {
+    text-decoration: none;
+    color: rgb(0, 119, 255);
+    padding: 0 15px;
+    font-size: 25px;
+    position: relative; 
+}
+nav a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 30px;
+    right: 0;
+    top: 50%;
+    background-color: #000;
+}
+nav a:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 30px;
+    right: 0;
+    top: 50%;
+    background-color: #000;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* 드롭다운 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; /* 처음에는 숨김 */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 120px;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: rgb(0, 119, 255);
+}
+
+/* 마우스 올리면 메뉴 표시 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 작대기 제거 */
+nav a::after {
+    display: none;
+}
+
+
+
+
+
+/* 지역 페이지 */
+.region-page{
+    padding: 40px;
+}
+
+/* 지역 카드 */
+.card{
+    background: white;
+    margin-bottom: 50px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color: rgb(0,119,255);
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* 맛집 5개 정렬 */
+.restaurant-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 맛집 카드 */
+.restaurant-item{
+    width: 220px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+
+.restaurant-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.restaurant-item h4{
+    margin: 10px;
+    font-size: 18px;
+}
+
+
+.restaurant-item p{
+    margin: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+@media (max-width: 768px){
+    .restaurant-grid{
+        justify-content: center;
+    }
+
+    .restaurant-item{
+        width: 90%;
+    }
+}
+.region-page{
+    padding:40px;
+}
+
+.region-page h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:rgb(0,119,255);
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    margin-bottom:50px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:rgb(0,119,255);
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.restaurant-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.restaurant-item{
+    width:220px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    background:white;
+    transition:0.3s;
+}
+
+.restaurant-item:hover{
+    transform:translateY(-5px);
+}
+
+.restaurant-item img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.restaurant-item h4{
+    margin:10px;
+    font-size:18px;
+}
+
+.restaurant-item p{
+    margin:10px;
+    font-size:14px;
+    color:#666;
+}
+
+@media(max-width:768px){
+    .restaurant-grid{
+        justify-content:center;
+    }
+
+    .restaurant-item{
+        width:90%;
+    }
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo-link{
+    text-decoration:none;
+    color:rgb(0,119,255);
+}
+.genre-page{
+    padding:40px;
+}
+
+.food-box{
+    background:white;
+    padding:30px;
+    margin-bottom:40px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.food-box h3{
+    color:rgb(0,119,255);
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.restaurant-grid{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:15px;
+}
+
+.restaurant-item{
+    width:100%;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    background:white;
+}
+.restaurant-item img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.restaurant-item h4{
+    margin:10px;
+    font-size:18px;
+}
+
+.restaurant-item p{
+    margin:10px;
+    font-size:14px;
+    color:#666;
+}
+
+.restaurant-item:hover{
+    transform:translateY(-5px);
+    transition:0.3s;
+}
